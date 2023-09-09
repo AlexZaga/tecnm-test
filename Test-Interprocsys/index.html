@@ -2,12 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalabrle=no, initial-scale=1, maximum-scale-1, minium=scale-1">
-    <title>Interprocsys</title>
-    <link rel="icon" class="imglogo" href="img/logo.png">
+    <title>Interprocsys Test</title>
+    <link rel="icon" class="imglogo" href="https://media.licdn.com/dms/image/C4E0BAQHb7v8L71LfVQ/company-logo_200_200/0/1559928909989?e=1702512000&v=beta&t=SUGw2lVLy8Ep92oZxruwZLpQe1CkWmKv4S9f_S5KPZY" >
   </head>
   <header>
     <img class="fondobarra">
@@ -15,13 +14,14 @@
       <img src="img/logots.png" alt="logoEmp" class="logosuper">
     <nav class="menu">
       <br>
-      <h4 id="nameuser">@Interprocsys</h4>
+      <h4 id="nameuser">@Interprocsys-Test</h4>
       <br>
     </nav>
   </div>
   </header>
 
   <body>
+    <!--ancho de wind-->
     <!--
     <div id="app"></div>
     
@@ -37,7 +37,7 @@
               <a href="indexsuper.html">                    
                   <img class="imgsuper" src="img/imgsuper.png" >                    
                   <p class="textsuper">Super Usuario</p>
-              </p>
+              </a>
           </div>
           <div class="botonadmin">            
               <a href="indexadmin.html">
@@ -64,13 +64,56 @@
               </a>
           </div>
       </div>
+      <div id="ocultos" class="menumini">
+        <div class="botonsuper" >
+            <a href="indexsuper.html">                    
+                <img class="imgsuper" src="img/imgsuper.png" >                    
+                <p class="textsuper">Super Usuario</p>
+            </a>
+        </div>        
+        <div class="botonadmin">            
+            <a href="indexadmin.html">
+                <img class="imgadmin" src="img/imgadmin.png">
+                <p class="textadmin">Administrador</p>
+            </a>
+        </div>
+        <div class="botonstaker">            
+            <a href="indexstaker.html" >
+                <img class="imgstaker" src="img/imgstaker.png" alt="">
+                <p class="textstaker">Stakerholder</p>
+            </a>
+        </div>      
+        <div class="botoncliente">            
+            <a href="indexclient.html" >
+                <img class="imgcliente" src="img/imgcliente.png" alt="">
+                <p class="textclient">Clientes</p>
+            </a>
+        </div>
+        <div class="botonuser">            
+            <a href="indexuser.html" >
+                <img class="imguser" src="img/imgusuario.png" alt="">
+                <p class="textuser">Usuarios</p>
+            </a>
+        </div>
+      </div>
+      </div>
   </section>
-
-  </div>
-  <div class="fondosuperior">
 
   </body>
 </html>
+
+<script> 
+  window.addEventListener('resize', function () {
+      var ocultos = document.getElementById('ocultos');
+      if (window.innerWidth <= 820) { // Cambia 768 al ancho deseado
+        ocultos.style.display = 'block';
+      } else {
+        ocultos.style.display = 'none';
+      }
+  });
+
+</script>
+
 
 <style>
   :root {
@@ -80,10 +123,10 @@
   --letras: #171717;
   --colorbotones: #32a1cd;
   --colortemporal: #ff0101;
-  --fondoopciones: #5e0fa754;
+  --fondoopciones: #32a1cdbb;
 }
 
-@media (max-width:720px) {
+@media (max-width:820px) {
   header .logosuper-img {
       position: fixed;
       opacity: 1;
@@ -99,8 +142,101 @@
       align-items: center;
       opacity: 0;
       pointer-events: none;
+      background: red;
   }
+
+  .menubolitas{
+    opacity: 0;
+    pointer-events: none;
+  }
+  .menumini{
+    pointer-events: all;
+    position: relative;
+    width: 70%;
+    left: 15%;
+    top: 50px;
+    display: block;
+  }
+  .menumini .botonsuper{
+    background:var(--fondoopciones);
+    height: 80px;
+    width: 80px;
+    top: 10px;
+    left: 10%;
+  }
+  .menumini .botonsuper .textsuper{
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+    font-weight: 600;
+    padding: 15px;
+    left: 100%;
+    
+  }
+  .menumini .botonadmin{
+    background:var(--fondoopciones);
+    height: 80px;
+    width: 80px;
+    top: 20px;
+    left: 60%;
+  }
+  .menumini .botonadmin .textadmin{
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+    font-weight: 600;
+    padding: 10px;
+    left: -200%;
+  }
+  .menumini .botonstaker{
+    background:var(--fondoopciones);
+    height: 80px;
+    width: 80px;
+    top: 20px;
+    left: 10%;
+  }
+  .menumini .botonstaker .textstaker{
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+    font-weight: 600;
+    padding: 10px;
+    left: 100%;
+  }
+  .menumini .botoncliente{
+    background:var(--fondoopciones);
+    height: 80px;
+    width: 80px;
+    top: 20px;
+    left: 60%;
+  }
+  .menumini .botoncliente .textclient{
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+    font-weight: 600;
+    padding: 10px;
+    left: -150%;
+  }
+  .menumini .botonuser{
+    background:var(--fondoopciones);
+    height: 80px;
+    width: 80px;
+    top: 20px;
+    left: 10%;
+  }
+  .menumini .botonuser .textuser{
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+    font-weight: 600;
+    padding: 10px;
+    left: 110%;
+  }
+
 }
+
+
 * {
   margin: 0;
   padding: 0;
@@ -153,11 +289,8 @@ body {
   
   background-size: cover;
   background-position: center;
-  width: auto;
-  height: 70%;
-  top: 180px;
   background: var(--fondo);
-  background: url('img/edificio.png') no-repeat; 
+  background: url('img/edificio.png') ; 
 }
 
 nav {
@@ -219,17 +352,24 @@ nav ul li a.active {
 .cajon{
   background: var(--colortabla);
   width: 80%;
-  height: auto;
+  height: 480px;
   top: 120px;
   position: fixed;
   left: 10%;
-  opacity: .97;
+  opacity: 0.96;
+  z-index: 10;
 }
-
 .menubolitas{
   position: relative;
   height: 350px;
+  top: 50px;
 }
+
+.menumini{
+  position: absolute;
+  display: none;
+}
+
 .botonsuper{
   position: relative;
   width: 150px;

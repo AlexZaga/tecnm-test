@@ -39,6 +39,9 @@
         <!--Eliminar roles-->
         <!--Transferir Rol Unico-->
   <div class="tabla">
+    <center>
+        <h3>Usuarios en el sistema</h3>
+    </center>
     <button class="btstabla">Refrescar tabla</button>
     <button class="btstabla">Pagina Anterior</button>
     <button class="btstabla">Pagina Siguiente</button>
@@ -52,8 +55,8 @@
             <th class="tabledates"></th>
             <th class="tabledates"></th>
             <th class="tabledates"></th>
-            <th class="tabledatesbutton"><button class='bx bxs-edit-alt' ></button></th>
-            <th class="tabledatesbutton"><button class='bx bxs-trash-alt'></button></th>
+            <th class="tabledates"><button class='bx bxs-edit-alt' ></button></th>
+            <th class="tabledates"><button class='bx bxs-trash-alt'></button></th>
         </tr>
     </table>
 
@@ -71,22 +74,30 @@
 }
 
 @media (max-width:720px) {
-    header .logosuper-img {
-        position: fixed;
-        opacity: 1;
-    }
+
     header .menu {
-        top: -10px;
-        position: fixed;
+        position: relative;
+        color: var(--letras);
+        height: 100px;
+    }
+    header .menu span{
+        position: absolute;
         color: var(--letras);
         font-size: 20px;
-        left: 150px;
+        padding: 10px;
         width: auto;
-        height: 100px;
-        align-items: center;
+        height: 60px;
+        top: 10px;
+        left: 100px;
+        background: var(--colorbotones);
+        border-radius: 30px;
+    }
+    header .menu h4{
         opacity: 0;
         pointer-events: none;
     }
+    
+    
 }
 * {
     margin: 0;
@@ -128,7 +139,7 @@ header .menu {
     color: var(--letrasmenu);
     font-size: 18px;
     left: 25%;
-    width: auto;
+    width: 65%;
     height: 80px;
     align-items: center;
     padding: 0 20px 0 50px;
@@ -230,9 +241,9 @@ nav ul li a.active {
     background: var(--fondo);
     width: 40%;
 }
-.tabledatesbutton button{
-    background: var(--fondo);
+.tabledates button{
     background: transparent;
+    cursor: pointer;
 }
 
 .btstabla{
@@ -242,6 +253,7 @@ nav ul li a.active {
     background: var(--colorbotones);
     color: var(--letras);
     left: 5%;
+    cursor: pointer;
 
 }
 </style>

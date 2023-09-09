@@ -19,12 +19,12 @@
                 </a>
               </li>
               <li class="list-item active">
-                <a href="#.html">
+                <a href="indexclient.html">
                   <span class="links-name">Productos</span>
                 </a>
               </li>
               <li class="list-item ">
-                <a href="indexclient.html">
+                <a href="x.html">
                   <span class="links-name">Carrito</span>
                 </a>
               </li>
@@ -33,6 +33,7 @@
             <h4 id="nameuser">Bienvenido @cliente </h4>
             <br>
           </nav>
+          
         </div>
         </header>
         <!-- Fin de barra de menu-->
@@ -44,6 +45,9 @@
         <!--Eliminar roles-->
         <!--Transferir Rol Unico-->
   <div class="tabla">
+    <center>
+        <h3>Productos en Tienda</h3>
+    </center>
     <button class="btstabla">Refrescar</button>
     <button class="btstabla">Pagina Anterior</button>
     <button class="btstabla">Pagina Siguiente</button>
@@ -52,17 +56,17 @@
         <th class="tabledates">Marca</th>
         <th class="tabledates">Stock</th>
         <th class="tabledates">Precio</th>
-        <th class="tabledates">Descuento</th>
+        <th class="tabledates">Promocion</th>
         <th class="tabledates">Cantidad</th>
-        <th class="tabledates">Añadir al carrito</th>
+        <th class="tabledates">Agregar</th>
         <tr>
             <th class="tabledates"> </th>
             <th class="tabledates"> </th>
             <th class="tabledates"> </th>
             <th class="tabledates"> </th>
             <th class="tabledates"> </th>
-            <th class="tabledatesbutton"><input type="number"></th>
-            <th class="tabledatesbutton"><button class='bx bx-cart-add'></button></th>
+            <th class="tabledates"><input type="number"></th>
+            <th class="tabledates"><button class='bx bx-cart-add'></button></th>
         </tr>
         
     </table>
@@ -232,28 +236,44 @@ nav ul li a.active {
     background: var(--colortabla);
     position: fixed;
     top: 100px;
-    left: 10%;
-    width: 80%;
+    left: 5%;
+    width: 90%;
     height: 100%;
 }
 .tabledates{
     background: var(--fondo);
-    width: 20%;
+    width: 5%;
 }
 
+.tabledates input{
+    background: var(--fondo);
+    background: transparent;
+    background: var(--fondo);
+    text-align: right;
+    font-size: 15px;
+    font-weight: 500;
+    color: #171717;
+    width: 50%;
+    cursor: pointer;
+
+}
+
+.tabledates button{
+    background: var(--fondo);
+    background: transparent;
+    color: #171717;
+    font-weight: 700;
+    cursor: pointer;
+}
 
 .btstabla{
-    padding: 5px;
+    padding: 10px;
     height: auto;
     position: relative;
     background: var(--colorbotones);
     color: var(--letras);
     left: 5%;
-    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
 }
-.tabledatesbutton button{
-    background: var(--fondo);
-    background: transparent;
-}
-
 </style>
