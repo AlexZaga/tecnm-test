@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, user-scalabrle=no, initial-scale=1, maximum-scale-1, minium=scale-1">
+            <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" >
+            <title>Interprocsys</title>
+            <link rel="icon" class="imglogo" href="img/logo.png">
+        </head>        
+        <header>
+          <img class="fondobarra">
+          <div class="barra">
+            <img src="img/imgcliente.png" alt="logoEmp" class="logosuper">
+          <nav class="menu">
+            <ul class="lista">
+              <li class="list-item ">
+                <a href="index.html">
+                  <span class="links-name">Inicio</span>
+                </a>
+              </li>
+              <li class="list-item active">
+                <a href="#.html">
+                  <span class="links-name">Productos</span>
+                </a>
+              </li>
+              <li class="list-item ">
+                <a href="indexclient.html">
+                  <span class="links-name">Carrito</span>
+                </a>
+              </li>
+            </ul>
+            <br>
+            <h4 id="nameuser">Bienvenido @cliente </h4>
+            <br>
+          </nav>
+        </div>
+        </header>
+        <!-- Fin de barra de menu-->
+<body> 
+        <!--Tiene que administrar administradores-->
+        <!--Crear roles-->       
+        <!--Visualizar role--> 
+        <!--administrar roles-->
+        <!--Eliminar roles-->
+        <!--Transferir Rol Unico-->
+  <div class="tabla">
+    <button class="btstabla">Refrescar</button>
+    <button class="btstabla">Pagina Anterior</button>
+    <button class="btstabla">Pagina Siguiente</button>
+    <table id="tablaadmin">
+        <th class="tabledates">Nombre</th>
+        <th class="tabledates">Marca</th>
+        <th class="tabledates">Stock</th>
+        <th class="tabledates">Precio</th>
+        <th class="tabledates">Descuento</th>
+        <th class="tabledates">Cantidad</th>
+        <th class="tabledates">Añadir al carrito</th>
+        <tr>
+            <th class="tabledates"> </th>
+            <th class="tabledates"> </th>
+            <th class="tabledates"> </th>
+            <th class="tabledates"> </th>
+            <th class="tabledates"> </th>
+            <th class="tabledatesbutton"><input type="number"></th>
+            <th class="tabledatesbutton"><button class='bx bx-cart-add'></button></th>
+        </tr>
+        
+    </table>
+
+</div>
+</html>
+
+<style>
+    :root {
+    --fondo: #f1f4f6;
+    --colortabla: #ffffff;
+    --colorbarra: #53d8d8;
+    --letras: #171717;
+    --colorbotones: #32a1cd;
+    --colortemporal: #ff0101;
+}
+
+@media (max-width:720px) {
+    header .logosuper-img {
+        position: fixed;
+        opacity: 1;
+    }
+    header .menu {
+        top: -10px;
+        position: fixed;
+        color: var(--letras);
+        font-size: 20px;
+        left: 150px;
+        width: auto;
+        height: 100px;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "roboto", sans-serif;
+}
+header {
+    /*background-image: var(--colortemporal);*/
+    position: fixed;
+    z-index: 1;
+    background-color: #4dbdeb;
+}
+header .fondobarra {
+    position: fixed;
+    left: -1px;
+    top: -1px;
+    background-color: var(--colorbarra);
+    height: 80px;
+    width: 101%;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+}
+header .logosuper {
+    position: fixed;
+    height: 80px;
+    width: auto;
+    left: 10%;
+    top: 0px;
+}
+header .menu {
+    top: 0px;
+    position: fixed;
+    color: var(--letrasmenu);
+    font-size: 18px;
+    left: 25%;
+    width: auto;
+    height: 80px;
+    align-items: center;
+    padding: 0 20px 0 50px;
+}
+body {
+    /*background: url('../img/fondo.png') no-repeat;*/
+    position: absolute;
+    background: var(--fondo);
+    background-size: cover;
+    background-position: center;
+    animation: animatebg 5s linear infinite;
+    width: auto;
+    height: 70%;
+    top: 180px;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+nav ul li a.active {
+    color: white;
+}
+
+.menu ul {
+    margin-top: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+    color: var(--letrasmenu);
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+    color: var(--letrasmenu);
+}
+
+.menu ul a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--letrasmenu);
+}
+
+.menu .list-item {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.menu ul .list-item.active a {
+    border-radius: 10px;
+    color: var(--letrasmenu);
+    text-align: center;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    background: var(--colorbotones);
+}
+
+.menu links-name {
+    opacity: 0;
+    pointer-events: none;
+    color: var(--letrasmenu);
+}
+
+.menu .login .boton-login {
+    background-color: var(--colorbotones);
+    border: none;
+    color: white;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+    right: 10px;
+    cursor: pointer;
+}
+
+.tabla{
+    background: var(--colortabla);
+    position: fixed;
+    top: 100px;
+    left: 10%;
+    width: 80%;
+    height: 100%;
+}
+.tabledates{
+    background: var(--fondo);
+    width: 20%;
+}
+
+
+.btstabla{
+    padding: 5px;
+    height: auto;
+    position: relative;
+    background: var(--colorbotones);
+    color: var(--letras);
+    left: 5%;
+    background: transparent;
+}
+.tabledatesbutton button{
+    background: var(--fondo);
+    background: transparent;
+}
+
+</style>
