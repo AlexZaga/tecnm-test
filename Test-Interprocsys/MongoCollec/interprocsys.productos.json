@@ -1,0 +1,129 @@
+[{
+  "_id": {
+    "$oid": "64f648468e1d1a3d043a0e46"
+  },
+  "nombre": "galletas animalitos",
+  "marca": "gamesa",
+  "cantidad": 20,
+  "precio": 30
+},
+{
+  "_id": {
+    "$oid": "64f648468e1d1a3d043a0e47"
+  },
+  "nombre": "doritos taco",
+  "marca": "sabritas",
+  "cantidad": 15,
+  "precio": 17
+},
+{
+  "_id": {
+    "$oid": "64f648468e1d1a3d043a0e48"
+  },
+  "nombre": "agua simple",
+  "marca": "bonafon",
+  "cantidad": 30,
+  "precio": 18.5
+},
+{
+  "_id": {
+    "$oid": "64f648468e1d1a3d043a0e49"
+  },
+  "nombre": "takis tako",
+  "marca": "barcel",
+  "cantidad": 35,
+  "precio": 19.5
+},
+{
+  "_id": {
+    "$oid": "64f648468e1d1a3d043a0e4a"
+  },
+  "nombre": "takis fuego",
+  "marca": "barcel",
+  "cantidad": 10,
+  "precio": 18.5
+},
+{
+  "_id": {
+    "$oid": "64f648468e1d1a3d043a0e4b"
+  },
+  "nombre": "runners",
+  "marca": "barcel",
+  "cantidad": 15,
+  "precio": 14
+},
+{
+  "_id": {
+    "$oid": "64f648468e1d1a3d043a0e4c"
+  },
+  "nombre": "takis guacamole",
+  "marca": "barcel",
+  "cantidad": 10,
+  "precio": 18.5
+},
+{
+  "_id": {
+    "$oid": "64f648468e1d1a3d043a0e4d"
+  },
+  "nombre": "runners fuego",
+  "marca": "barcel",
+  "cantidad": 15,
+  "precio": 12
+},
+{
+  "_id": {
+    "$oid": "64f648478e1d1a3d043a0e4e"
+  },
+  "nombre": "mamut",
+  "marca": "gamesa",
+  "cantidad": 30,
+  "precio": 5.5
+},
+{
+  "_id": {
+    "$oid": "64f648478e1d1a3d043a0e4f"
+  },
+  "nombre": "chokis unicornio",
+  "marca": "gamesa",
+  "cantidad": 15,
+  "precio": 20
+},
+{
+  "_id": {
+    "$oid": "64f648478e1d1a3d043a0e50"
+  },
+  "nombre": "emperador cenizas",
+  "marca": "gamesa",
+  "cantidad": 10,
+  "precio": 17.5
+},
+{
+  "_id": {
+    "$oid": "64f6486d8e1d1a3d043a0e51"
+  },
+  "nombre": "doritos pizza",
+  "marca": "sabritas",
+  "tamaño": "normal",
+  "cantidad": 23,
+  "precio": 15.5
+},
+{
+  "_id": {
+    "$oid": "64f6486d8e1d1a3d043a0e52"
+  },
+  "nombre": "doritos mini",
+  "marca": "sabritas",
+  "tamaño": "normal",
+  "cantidad": 29,
+  "precio": 10
+},
+{
+  "_id": {
+    "$oid": "64f6486d8e1d1a3d043a0e53"
+  },
+  "nombre": "doritos toro",
+  "marca": "sabritas",
+  "tamaño": "normal",
+  "cantidad": 10,
+  "precio": 15.5
+}]

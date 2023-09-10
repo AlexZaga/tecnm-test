@@ -1,0 +1,25 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "c54a7234-f46c-4e6b-aae8-9f46f2ed2ea9",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjowLCJzdGF0ZSI6W119"
+        }
+      },
+      "favorite": {
+        "name": "interprocsys"
+      },
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1693890200552"
+        }
+      }
+    }
+  ]
+}

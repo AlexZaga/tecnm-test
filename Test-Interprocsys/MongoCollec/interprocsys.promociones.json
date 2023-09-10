@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "64f6482b8e1d1a3d043a0e45"
+  },
+  "marca": "barcel",
+  "descuentoporcent": 15,
+  "descripcion": "en la compra de productos",
+  "tipo": "compra",
+  "fechainicio": {
+    "$date": "2023-09-04T12:00:00.000Z"
+  },
+  "fechatermino": {
+    "$date": "2023-09-06T15:00:00.000Z"
+  }
+}]

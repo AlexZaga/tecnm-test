@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "64f648ab8e1d1a3d043a0e54"
+  },
+  "nombre": "ruben",
+  "usuario": "ruben1",
+  "rol": "supersu"
+},
+{
+  "_id": {
+    "$oid": "64f648ab8e1d1a3d043a0e55"
+  },
+  "nombre": "oswaldo",
+  "usuario": "ruben1",
+  "rol": "administrador"
+},
+{
+  "_id": {
+    "$oid": "64f648ab8e1d1a3d043a0e56"
+  },
+  "nombre": "javier",
+  "usuario": "javis11",
+  "rol": "cliente"
+},
+{
+  "_id": {
+    "$oid": "64f648ab8e1d1a3d043a0e57"
+  },
+  "nombre": "alejandro",
+  "usuario": "elej",
+  "rol": "stakerholder"
+}]
