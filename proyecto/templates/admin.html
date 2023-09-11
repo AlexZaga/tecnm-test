@@ -1,0 +1,112 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .btn-clicked {
+            background-color: blue; /* Cambia el color de fondo a azul */
+            color: white; /* Cambia el color del texto a blanco para que sea visible en el fondo azul */
+        }
+        .btn-clickedr {
+            background-color: red; /* Cambia el color de fondo a rojo */
+            color: white; /* Cambia el color del texto a blanco para que sea visible en el fondo rojo */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Bienvenido admin</h1>
+    <form method="POST" action="/logout">
+        <input type="submit" value="Cerrar Sesión">
+    </form>
+
+    <div class="container">
+        <div class="row row-col-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2">
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="text-center">Alta producto</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="/products" method="POST">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control mb-3" name="name">
+                            <label>Precio</label>
+                            <input type="text" class="form-control mb-3" name="price">
+                            <label>Cantidad</label>
+                            <input type="text" class="form-control mb-3" name="quantity">
+                            <button class="btn btn-primary" type="submit">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="text-center">Productos</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <div class="row row-col-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3">
+                                {% for product in products %}
+
+                                    <div class="col">
+                                        <li class="list-group-item mb-3">
+                                            <form action="/edit/{{product.name}}" method="POST">
+                                                <input type="text" class="form-control" value="{{product.name}}" name="name">
+                                                <small>CANTIDAD</small>
+                                                <input type="text" class="form-control" value="{{product.quantity}}" name="quantity">
+                                                <small>PRECIO</small>
+                                                <input type="text" class="form-control" value="{{product.price}}" name="price">
+                                                <button class="btn btn-primary btn-sm" type="submit">Editar</button>
+                                                <a href="{{url_for('delete', product_name=product.name)}}" class="btn btn-danger btn-sm">Eliminar</a>
+
+                                            </form>
+                                        </li>
+                                    </div>
+
+                                {% endfor %}
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <center>
+        <h1>Gestor de usuarios</h1>
+        <button onclick="habilitarCompraEnProductosView()" id="habilitarCompraBtn">Habilitar Compra</button>
+        <button onclick="deshabilitarCompraEnProductosView()" id="deshabilitarCompraBtn">Deshabilitar Compra</button>
+        <form method="GET" action="/gestorUsuario">
+            <!-- Botón para enviar el formulario y redirigir -->
+            <button type="submit">Gestor de usuarios</button>
+        </form>
+    </center>
+    <script>
+        function habilitarCompraEnProductosView() {
+            var btn = document.getElementById('habilitarCompraBtn');
+            btn.classList.add('btn-clicked'); // Agregar la clase al botón
+            // Quitar la clase 'btn-clicked' del otro botón
+            var deshabilitarBtn = document.getElementById('deshabilitarCompraBtn');
+            deshabilitarBtn.classList.remove('btn-clickedr');
+            // Guardar un valor en localStorage para controlar la habilitación/deshabilitación
+            localStorage.setItem('estadoCompra', 'habilirtado');
+        }
+        function deshabilitarCompraEnProductosView(){
+            var btn = document.getElementById('deshabilitarCompraBtn');
+            btn.classList.add('btn-clickedr'); // Agregar la clase al botón
+            // Quitar la clase 'btn-clicked' del otro botón
+            var habilitarBtn = document.getElementById('habilitarCompraBtn');
+            habilitarBtn.classList.remove('btn-clicked');
+            localStorage.setItem('estadoCompra', 'deshabilitado');
+        }
+    </script>
+    
+
+</body>
+</html>

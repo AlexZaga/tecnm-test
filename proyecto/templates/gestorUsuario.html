@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Gestor</title>
+</head>
+<body>
+    <h1>Gestor de usuarios</h1>
+
+    <h2>Usuarios Normales</h2>
+
+
+    <div class="container">
+        <div class="row row-col-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2">
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="text-center">Alta Usuario</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url_for('addUsuario') }}" method="POST">
+                            <label>Nombre de Usuario</label>
+                            <input type="text" class="form-control mb-3" name="username">
+                            <label>Contraseña</label>
+                            <input type="password" class="form-control mb-3" name="password">
+                            <button class="btn btn-primary" type="submit">Guardar</button>
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="text-center">Usuarios</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <div class="row row-col-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3">
+                                {% for usuario in usuarios_normales %}
+                                    <div class="col">
+                                        <li class="list-group-item mb-3">
+                                            <form action="{{ url_for('editUsuario', username=usuario.username) }}" method="POST">
+                                                <input type="text" class="form-control" value="{{ usuario['username'] }}" name="new_username">
+                                                <small>Contraseña</small>
+                                                <input type="password" class="form-control" value="{{ usuario['password'] }}" name="new_password">
+                                                <button class="btn btn-primary btn-sm" type="submit">Editar</button>                                               
+                                                <a href="{{url_for('deleteUsuario', username=usuario.username)}}" class="btn btn-danger btn-sm">Eliminar</a>
+                                            </form>                                                                                       
+                                        </li>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>
